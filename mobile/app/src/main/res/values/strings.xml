@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">NDF app</string>
+    <string name="button_text">scanner</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="mot_de_passe_oubli">Mot de passe oublié ?</string>
+    <string name="vous_n_tes_pas_connect_veillez_vous_connecter">Vous n\'êtes pas connecté!\nVeuillez vous connecter.</string>
+    <string name="bienvenue">Bienvenue!</string>
+    <string name="afficher_facture">afficher facture</string>
+
+</resources>

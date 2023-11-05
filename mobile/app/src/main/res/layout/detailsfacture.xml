@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.DetailsFactureActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:text="Infos facture"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/afficher_facture"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="30dp"
+            android:text="@string/afficher_facture"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+        />
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/image_facture"
+            android:layout_width="fill_parent"
+            android:layout_height="800dp"
+            android:visibility="gone"
+            android:scaleType="fitCenter"
+            />
+        <TextView
+            android:id="@+id/legende"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Legende"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:id="@+id/items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:text="siret"
+                android:textSize="20sp"
+                android:textColor="#FFFF00"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:text="date"
+                android:textSize="20sp"
+                android:textColor="#0000FF"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:text="HT"
+                android:textSize="20sp"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:text="TVA"
+                android:textSize="20sp"
+                android:textColor="#D7A1F9"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginLeft="30dp"
+                android:text="TTC"
+                android:textSize="20sp"
+                android:textColor="#00FF00"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/siret"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="SIRET"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/siretInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="siret"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21sp" />
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Date de la facture"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/dateInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="dd/mm/aaaa"
+            android:inputType="date"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21sp" />
+        <TextView
+            android:id="@+id/totalHT"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Total HT"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/totalHTInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="total HT"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21sp" />
+        <TextView
+            android:id="@+id/totalTVA"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Total TVA"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/totalTVAInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="total TVA"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21sp" />
+        <TextView
+            android:id="@+id/totalTTC"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Total TTC"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/totalTTCInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edit_text_background"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="total TTC"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:textSize="21sp" />
+        <TextView
+            android:id="@+id/categorie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Categorie"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            />
+        <Spinner
+            android:id="@+id/categorieInput"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+
+            android:backgroundTint="@color/white"
+            android:spinnerMode="dropdown"/>
+
+
+        <Button
+            android:id="@+id/addFacture"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/button_background"
+            android:text="Valider"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        app:backgroundTint="@color/purple_200"
+        app:itemBackground="@color/purple_200"
+        app:itemIconTint="@drawable/selector"
+        app:itemTextColor="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+</RelativeLayout>
